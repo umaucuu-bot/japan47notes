@@ -219,6 +219,8 @@
   .previews figcaption{
     margin-top:8px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;
   }
+  .preview-col{min-width:0;}
+  .swipe-hint{display:none;}
 
   /* ---------- roadmap ---------- */
   .roadmap-panel{
@@ -309,6 +311,35 @@
   }
   .ecard .go span:last-child{color:var(--muted-light);}
 
+  /* currency figures: one pair of amounts, main + alt */
+  .money{display:inline;}
+  .money .p-main{font:inherit;}
+  .money .p-alt{
+    display:block;margin-top:1px;
+    font-family:"Inter",sans-serif;font-size:11.5px;font-weight:400;letter-spacing:.01em;line-height:1.35;
+    opacity:.72;
+  }
+  .money.m-inline .p-alt{display:inline;margin:0 0 0 3px;font-size:11px;}
+  .money.m-inline .p-alt::before{content:"(";}
+  .money.m-inline .p-alt::after{content:")";}
+
+  /* currency switch */
+  .currency-bar{
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;
+    margin:0 0 clamp(22px,3vw,30px);padding:9px 12px;
+    background:var(--paper);border:1px solid var(--rule);border-radius:7px;
+  }
+  .cur-label{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .cur-switch{display:inline-flex;align-items:center;gap:2px;padding:3px;background:var(--cream-deep);border:1px solid var(--rule);border-radius:100px;}
+  .cur-btn{
+    appearance:none;cursor:pointer;font:inherit;font-size:12.5px;font-weight:600;letter-spacing:.02em;
+    border:0;background:transparent;color:var(--ink-soft);border-radius:100px;
+    padding:7px 14px;min-height:34px;line-height:1;transition:background .15s ease,color .15s ease;
+  }
+  .cur-btn:hover{color:var(--ink);}
+  .cur-btn[aria-pressed="true"]{background:var(--forest);color:var(--cream);}
+  .cur-note{font-size:11px;color:var(--muted-light);letter-spacing:.02em;margin-left:auto;}
+
   /* rail feature */
   .rail-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:14px;align-items:stretch;}
   .rail-feature{
@@ -329,7 +360,18 @@
   .rail-feature .price{
     font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.9rem,4vw,2.5rem);line-height:1.1;margin:6px 0 2px;
   }
+  .rail-feature .price .money{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:10px;}
+  .rail-feature .price .p-alt{
+    display:inline;margin:0;font-family:"Inter",sans-serif;font-size:13px;font-weight:500;
+    letter-spacing:.03em;opacity:1;color:#F3D9A8;
+  }
   .rail-feature .price small{font-family:"Inter",sans-serif;font-size:12px;font-weight:500;letter-spacing:.04em;opacity:.72;margin-left:6px;}
+  .cond{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;}
+  .cond li{
+    font-size:11px;line-height:1.3;letter-spacing:.03em;color:rgba(246,241,228,.9);
+    border:1px solid rgba(246,241,228,.26);border-radius:100px;padding:5px 10px;
+  }
+  .cond li.key{color:#F3D9A8;border-color:rgba(243,217,168,.5);}
   .rail-feature .price-note{font-size:12px;color:rgba(246,241,228,.72);margin:0 0 16px;}
   .fare-table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:13px;}
   .fare-table th,.fare-table td{
@@ -337,6 +379,7 @@
   }
   .fare-table th{font-weight:400;color:rgba(246,241,228,.75);}
   .fare-table td{text-align:right;font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap;}
+  .fare-table td .p-alt{font-weight:400;opacity:.72;white-space:nowrap;}
   .fare-table tr.total th,.fare-table tr.total td{color:#F3D9A8;font-weight:600;border-bottom:0;}
   .fare-table tr.pass th,.fare-table tr.pass td{color:#FFFDF6;font-weight:600;border-bottom:1px solid rgba(246,241,228,.1);}
   .fare-table tr.save th,.fare-table tr.save td{color:#F3D9A8;font-size:12px;border-bottom:0;}
@@ -412,13 +455,28 @@
   @media (max-width:680px){
     body{font-size:16px;}
     .container{padding:0 18px;}
-    .head-inner{height:56px;gap:10px;}
+    .head-inner{height:58px;gap:10px;}
     .brand{gap:8px;}
     .brand span{font-size:13.5px;}
     .brand img{width:24px;height:24px;}
-    .site-nav{gap:12px;font-size:10.5px;letter-spacing:.07em;}
+    .site-nav{gap:4px;font-size:11px;letter-spacing:.05em;}
+    .site-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;}
     .site-nav a.nav-hide{display:none;}
-    .site-nav .nav-cta{padding:6px 11px;font-size:10px;}
+    .site-nav .nav-cta{padding:0 12px;min-height:36px;font-size:11px;margin-left:2px;}
+    .cur-btn{min-height:40px;padding:7px 16px;font-size:13px;}
+    .currency-bar{padding:8px 10px;gap:6px 10px;}
+    .cur-note{font-size:10.5px;margin-left:0;width:100%;}
+    .region-tab{padding:10px 14px;min-height:42px;font-size:12.5px;}
+    .board-links a{display:inline-flex;align-items:center;min-height:42px;padding:9px 15px;}
+    .text-link{display:inline-flex;align-items:center;min-height:40px;}
+    .cond li{font-size:10.5px;padding:5px 9px;}
+    .fare-table{font-size:12.5px;}
+    .fare-table th,.fare-table td{padding:9px 0;}
+    .swipe-hint{
+      display:flex;align-items:center;justify-content:center;gap:7px;
+      margin:12px 0 0;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-light);
+    }
+    .swipe-hint span[aria-hidden]{font-size:14px;letter-spacing:0;}
     .stats{gap:0 14px;}
     .stats b{font-size:19px;}
     .stats span{font-size:10px;letter-spacing:.06em;}
@@ -619,6 +677,7 @@
         <p class="check-note">Free to print and share. No sign-up required.</p>
       </div>
 
+      <div class="preview-col">
       <div class="previews">
         <figure>
           <img src="assets/preview-01.jpg" width="520" height="735" loading="lazy" alt="Checklist page 1: the cover with a red sun and Mount Fuji line drawing">
@@ -632,6 +691,8 @@
           <img src="assets/preview-05.jpg" width="520" height="735" loading="lazy" alt="Checklist page 5: the Before You Go travel prep page">
           <figcaption>Before you go</figcaption>
         </figure>
+      </div>
+      <p class="swipe-hint">Swipe for more pages <span aria-hidden="true">→</span></p>
       </div>
     </div>
   </section>
@@ -729,7 +790,16 @@
       <div class="sec-head">
         <p class="eyebrow"><span class="num">04</span> Travel prep, booked before you fly</p>
         <h2>The three things <em>worth sorting early.</em></h2>
-        <p class="sec-sub">Data before you land, a rail pass if the arithmetic works, and one booked experience for the day the weather turns. Links marked <strong>ad</strong> are affiliate links — the price you pay is the same.</p>
+        <p class="sec-sub">Data before you land, a rail pass if the arithmetic works, and one booked experience for the day the weather turns. Every price is shown in US$ with yen beside it — switch the currency above to match what Klook shows you. Links marked <strong>ad</strong> are affiliate links — the price you pay is the same.</p>
+      </div>
+
+      <div class="currency-bar">
+        <span class="cur-label" id="cur-label">Show prices in</span>
+        <div class="cur-switch" role="group" aria-labelledby="cur-label">
+          <button class="cur-btn" type="button" data-cur="usd" aria-pressed="true">US$</button>
+          <button class="cur-btn" type="button" data-cur="jpy" aria-pressed="false">JPY ¥</button>
+        </div>
+        <span class="cur-note">Rough guide: ¥159 = US$1 · November 2026</span>
       </div>
 
       <!-- eSIM -->
@@ -770,18 +840,23 @@
           <a class="rail-feature" href="https://klook.tpk.mx/rABYZm35" target="_blank" rel="sponsored noopener noreferrer">
             <span class="kicker">JR EAST PASS · Tohoku route <span class="ad">ad</span></span>
             <h4>Five days of shinkansen for less than a return to Aomori</h4>
-            <p class="price">¥35,000<small>5 consecutive days</small></p>
-            <p class="price-note">10-day pass ¥50,000 · child 5-day ¥17,500</p>
+            <p class="price"><span class="money" data-usd="US$220" data-jpy="¥35,000"><span class="p-main">US$220</span><span class="p-alt">approx. ¥35,000</span></span></p>
+            <p class="price-note">5 consecutive days · 10-day pass <span class="money m-inline" data-usd="US$314" data-jpy="¥50,000"><span class="p-main">US$314</span><span class="p-alt">approx. ¥50,000</span></span> · child 5-day <span class="money m-inline" data-usd="US$110" data-jpy="¥17,500"><span class="p-main">US$110</span><span class="p-alt">approx. ¥17,500</span></span></p>
             <table class="fare-table">
               <caption class="sr">Fare comparison between a Tokyo–Aomori return ticket and the JR EAST PASS</caption>
               <tbody>
-                <tr><th scope="row">Tokyo → Aomori, Hayabusa one way</th><td>¥17,910</td></tr>
-                <tr class="total"><th scope="row">Same trip as a return</th><td>¥35,820</td></tr>
-                <tr class="pass"><th scope="row">JR EAST PASS, 5 days</th><td>¥35,000</td></tr>
-                <tr class="save"><th scope="row">A return, against the pass</th><td>¥820 more</td></tr>
+                <tr><th scope="row">Tokyo → Aomori, Hayabusa one way</th><td><span class="money" data-usd="US$113" data-jpy="¥17,910"><span class="p-main">US$113</span><span class="p-alt">approx. ¥17,910</span></span></td></tr>
+                <tr class="total"><th scope="row">Same trip as a return</th><td><span class="money" data-usd="US$226" data-jpy="¥35,820"><span class="p-main">US$226</span><span class="p-alt">approx. ¥35,820</span></span></td></tr>
+                <tr class="pass"><th scope="row">JR EAST PASS, 5 days</th><td><span class="money" data-usd="US$220" data-jpy="¥35,000"><span class="p-main">US$220</span><span class="p-alt">approx. ¥35,000</span></span></td></tr>
+                <tr class="save"><th scope="row">A return, against the pass</th><td><span class="money" data-usd="US$5 more" data-jpy="¥820 more"><span class="p-main">US$5 more</span><span class="p-alt">approx. ¥820 more</span></span></td></tr>
               </tbody>
             </table>
-            <p class="fine">2 h 58 min each way; the pass also covers Sendai, Morioka, Akita, the Aoimori Railway and the Sanriku Railway. Foreign passport required; Hayabusa seats are reserved separately. Fares are the ordinary reserved-seat price, checked November 2026 — confirm on the day you buy.</p>
+            <ul class="cond">
+              <li class="key">Foreign passport required</li>
+              <li>Hayabusa seats booked separately</li>
+              <li>Covers Sendai · Morioka · Akita</li>
+            </ul>
+            <p class="fine">2 h 58 min each way; the pass also covers the Aoimori Railway and the Sanriku Railway. Fares are the ordinary reserved-seat price, checked November 2026 — confirm on the day you buy. US$ figures are a rough guide at about ¥159 = US$1 (November 2026); the currency and rate at Klook checkout decide what you pay.</p>
             <span class="go"><span>Check dates and prices on Klook</span><span aria-hidden="true">→</span></span>
           </a>
           <div class="rail-side">
@@ -834,7 +909,7 @@
             <ul class="facts">
               <li>09:00–12:45 from the station information centre</li>
               <li>1–4 people, lunch and market ticket included</li>
-              <li>From about US$68 per person; check your date</li>
+              <li>From about <span class="money m-inline" data-usd="US$68" data-jpy="¥10,800"><span class="p-main">US$68</span><span class="p-alt">approx. ¥10,800</span></span> per person; check your date</li>
             </ul>
             <span class="go"><span>Check dates on Klook</span><span aria-hidden="true">→</span></span>
           </a>
@@ -859,7 +934,7 @@
 
       <div class="disclosure" id="affiliate" style="margin-top:36px;">
         <strong>#affiliate</strong>
-        Some links on this page are affiliate links. If you book through one, Japan 47 Notes may earn a small commission at no extra cost to you. Klook is the partner for tours, rail passes and tickets; Airalo and Saily are the partners for eSIM data plans. Prices and availability change — always check the dates you want before booking.
+        Some links on this page are affiliate links. If you book through one, Japan 47 Notes may earn a small commission at no extra cost to you. Klook is the partner for tours, rail passes and tickets; Airalo and Saily are the partners for eSIM data plans. Prices and availability change — always check the dates you want before booking. US$ figures are approximate conversions from yen at about ¥159 = US$1, and the rate at checkout decides.
       </div>
     </div>
   </section>
@@ -902,6 +977,24 @@
     t.addEventListener('click', function(){ apply(t.getAttribute('data-region')); });
   });
   apply('all');
+
+  /* currency switch */
+  var money = Array.prototype.slice.call(document.querySelectorAll('.money'));
+  var curBtns = Array.prototype.slice.call(document.querySelectorAll('.cur-btn'));
+  var cur = 'usd';
+  function renderMoney(){
+    money.forEach(function(el){
+      var usd = el.getAttribute('data-usd'), jpy = el.getAttribute('data-jpy');
+      var main = (cur === 'usd') ? usd : jpy;
+      var alt  = (cur === 'usd') ? jpy : usd;
+      el.innerHTML = '<span class="p-main">' + main + '</span><span class="p-alt">approx. ' + alt + '</span>';
+    });
+    curBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-cur') === cur)); });
+  }
+  curBtns.forEach(function(b){
+    b.addEventListener('click', function(){ cur = b.getAttribute('data-cur'); renderMoney(); });
+  });
+  if(money.length){ renderMoney(); }
 
   if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     var io = new IntersectionObserver(function(entries){

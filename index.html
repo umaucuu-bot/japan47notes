@@ -135,10 +135,11 @@
     box-shadow:var(--shadow);
   }
   .hero-figure figcaption{
-    display:flex;align-items:center;gap:9px;margin-top:12px;
+    display:flex;align-items:flex-start;gap:9px;margin-top:12px;
     font-size:12px;letter-spacing:.04em;color:var(--muted);
   }
   .dot{width:7px;height:7px;border-radius:50%;background:#3C7A5C;box-shadow:0 0 0 3px rgba(60,122,92,.14);flex:0 0 auto;}
+  .hero-figure figcaption .dot{margin-top:6px;}
   .vertical{
     position:absolute;right:-30px;top:0;
     writing-mode:vertical-rl;font-size:11px;letter-spacing:.42em;color:var(--muted-light);
@@ -401,27 +402,36 @@
   }
   @media (max-width:860px){
     .hero-grid{grid-template-columns:1fr;gap:34px;}
-    .hero-figure{max-width:420px;order:-1;}
+    .hero-figure{max-width:420px;}
     .vertical{display:none;}
     h1{font-size:clamp(2.3rem,8vw,3.4rem);}
     .check-grid{grid-template-columns:1fr;gap:36px;}
     .previews{max-width:520px;}
-    .site-nav{gap:18px;font-size:11.5px;}
+    .site-nav{gap:16px;font-size:11.5px;}
     .brand span{font-size:15px;}
   }
   @media (max-width:680px){
     body{font-size:16px;}
     .container{padding:0 18px;}
-    .head-inner{height:56px;gap:14px;}
-    .site-nav{gap:16px;}
+    .head-inner{height:56px;gap:10px;}
+    .brand{gap:8px;}
+    .brand span{font-size:13.5px;}
+    .brand img{width:24px;height:24px;}
+    .site-nav{gap:12px;font-size:10.5px;letter-spacing:.07em;}
     .site-nav a.nav-hide{display:none;}
-    .site-nav .nav-cta{padding:6px 12px;font-size:11px;}
+    .site-nav .nav-cta{padding:6px 11px;font-size:10px;}
     .stats{gap:0 22px;}
     .stats b{font-size:19px;}
     .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
     .guide-title{font-size:1rem;}
     .guide-meta{font-size:11.5px;}
     .previews figure:nth-child(2),.previews figure:nth-child(3){transform:none;}
+    .previews{
+      display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;
+      scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;max-width:none;
+    }
+    .previews figure{flex:0 0 62%;scroll-snap-align:start;}
+    .previews::-webkit-scrollbar{height:0;}
     .cols-2,.cols-3{grid-template-columns:1fr;}
     .rail-side{flex-direction:column;}
     .pref-grid{grid-template-columns:repeat(auto-fill,minmax(94px,1fr));gap:7px;}
@@ -430,7 +440,7 @@
     .cta-row .btn{width:100%;}
     .download-cta{max-width:none;}
   }
-  @media (max-width:400px){
+  @media (max-width:340px){
     .guide-grid{grid-template-columns:1fr;}
     .guide-media{aspect-ratio:4/5;}
   }
@@ -518,7 +528,7 @@
       <figure class="hero-figure">
         <span class="vertical" aria-hidden="true">四十七都道府県</span>
         <img id="hero-img" src="assets/hero-sapporo.jpg" width="760" height="1013" alt="Cover of the Sapporo guide: Sapporo TV Tower lit orange through falling snow at night" fetchpriority="high">
-        <figcaption><span class="dot" aria-hidden="true"></span>No.01 Hokkaido · Sapporo — winter lights, 24 guides live</figcaption>
+        <figcaption><span class="dot" aria-hidden="true"></span>No.01 Hokkaido · Sapporo — 24 guides live</figcaption>
       </figure>
     </div>
   </section>

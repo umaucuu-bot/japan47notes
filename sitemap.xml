@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://umaucuu-bot.github.io/japan47notes/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/og-cover.jpg</image:loc>
+      <image:title>Japan 47 Notes — one prefecture at a time</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-sapporo.jpg</image:loc>
+      <image:title>Sapporo, Hokkaido — winter night lights guide</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-aomori-winter.jpg</image:loc>
+      <image:title>Aomori City — winter in Aomori guide</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://umaucuu-bot.github.io/japan47notes/japan-47-prefectures-checklist.pdf</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

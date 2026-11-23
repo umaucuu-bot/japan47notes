@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umaucuu-bot.github.io/japan47notes/sitemap.xml

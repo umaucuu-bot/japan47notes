@@ -499,6 +499,9 @@
     .cta-row .btn{width:100%;}
     .download-cta{max-width:none;}
   }
+  @media (max-width:365px){
+    .brand span{display:none;}
+  }
   @media (max-width:340px){
     .guide-grid{grid-template-columns:1fr;}
     .guide-media{aspect-ratio:4/5;}
@@ -548,7 +551,7 @@
 
 <header class="site-head">
   <div class="container head-inner">
-    <a class="brand" href="#top">
+    <a class="brand" href="#top" aria-label="Japan 47 Notes — home">
       <img src="assets/icon.png" width="28" height="28" alt="">
       <span>Japan 47 Notes</span>
     </a>

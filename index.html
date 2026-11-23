@@ -174,12 +174,6 @@
   .guide-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.7,.3,1);}
   .guide:hover .guide-media img{transform:scale(1.035);}
   .guide:hover .guide-title{color:var(--forest);}
-  .guide-num{
-    position:absolute;left:10px;top:10px;
-    background:rgba(249,244,232,.94);color:var(--ink);
-    font-size:10.5px;font-weight:600;letter-spacing:.12em;
-    padding:4px 8px;border-radius:3px;
-  }
   .guide-body{display:block;padding:13px 2px 0;}
   .guide-region{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--verm);font-weight:600;}
   .guide-title{
@@ -280,7 +274,7 @@
   }
   .prep-sub{margin:0 0 18px;font-size:14.5px;color:var(--muted);max-width:46rem;}
 
-  .card-grid{display:grid;gap:14px;}
+  .card-grid{display:grid;gap:14px;align-items:start;}
   .cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
   .cols-3{grid-template-columns:repeat(3,minmax(0,1fr));}
   .ecard{
@@ -343,7 +337,8 @@
   .fare-table th{font-weight:400;color:rgba(246,241,228,.75);}
   .fare-table td{text-align:right;font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap;}
   .fare-table tr.total th,.fare-table tr.total td{color:#F3D9A8;font-weight:600;border-bottom:0;}
-  .fare-table tr.pass th,.fare-table tr.pass td{color:#FFFDF6;font-weight:600;border-bottom:0;}
+  .fare-table tr.pass th,.fare-table tr.pass td{color:#FFFDF6;font-weight:600;border-bottom:1px solid rgba(246,241,228,.1);}
+  .fare-table tr.save th,.fare-table tr.save td{color:#F3D9A8;font-size:12px;border-bottom:0;}
   .rail-feature .fine{font-size:11.5px;line-height:1.6;color:rgba(246,241,228,.6);margin:0;}
   .rail-feature .go{
     margin-top:auto;padding-top:16px;font-size:12.5px;font-weight:600;letter-spacing:.04em;
@@ -534,7 +529,7 @@
       <div class="sec-head sec-head-row">
         <div>
           <p class="eyebrow"><span class="num">01</span> Featured city guides</p>
-          <h2>Two cities on the shelf, <em>forty-five to come.</em></h2>
+          <h2>Two cities, <em>forty-five to go.</em></h2>
           <p class="sec-sub">Each city gets a three-part guide of eight pins: what to see, what to eat, and what to take home. Every address is a walk or one bus from the station.</p>
         </div>
         <a class="text-link" href="https://www.pinterest.com/japan47notes/" target="_blank" rel="noopener">All guides on Pinterest →</a>
@@ -544,7 +539,6 @@
         <a class="guide" href="https://www.pinterest.com/japan47notes/01-hokkaido-sapporo/" target="_blank" rel="noopener">
           <span class="guide-media">
             <img src="assets/guide-sapporo.jpg" width="560" height="747" loading="lazy" alt="Sapporo guide cover: the TV tower glowing orange in snowfall at night">
-            <span class="guide-num">No.01</span>
           </span>
           <span class="guide-body">
             <span class="guide-region">Hokkaido · Sapporo</span>
@@ -557,39 +551,36 @@
         <a class="guide" href="https://www.pinterest.com/japan47notes/01-hokkaido-sapporo/" target="_blank" rel="noopener">
           <span class="guide-media">
             <img src="assets/guide-sapporo-food.jpg" width="560" height="747" loading="lazy" alt="Sapporo food guide cover: a steaming bowl of miso ramen with pork and corn">
-            <span class="guide-num">No.01</span>
           </span>
           <span class="guide-body">
             <span class="guide-region">Hokkaido · Sapporo</span>
             <span class="guide-title">What to Eat in Sapporo</span>
             <span class="guide-meta">5 dishes, 12 local shops, all inside the city.</span>
-            <span class="guide-state"><span class="dot" aria-hidden="true"></span>Guides live</span>
+            <span class="guide-state"><span class="dot" aria-hidden="true"></span>8 guides live</span>
           </span>
         </a>
 
         <a class="guide" href="https://www.pinterest.com/japan47notes/02-aomori-aomori-city/" target="_blank" rel="noopener">
           <span class="guide-media">
             <img src="assets/guide-aomori-winter.jpg" width="560" height="747" loading="lazy" alt="Aomori guide cover: a huge illuminated Nebuta festival lantern face">
-            <span class="guide-num">No.02</span>
           </span>
           <span class="guide-body">
             <span class="guide-region">Aomori · Aomori City</span>
             <span class="guide-title">Winter in Aomori</span>
             <span class="guide-meta">Sights, snow monsters and lanterns, all in the city.</span>
-            <span class="guide-state"><span class="dot" aria-hidden="true"></span>Guides live</span>
+            <span class="guide-state"><span class="dot" aria-hidden="true"></span>8 guides live</span>
           </span>
         </a>
 
         <a class="guide" href="https://www.pinterest.com/japan47notes/japanese-local-food-street-eats/" target="_blank" rel="noopener">
           <span class="guide-media">
             <img src="assets/guide-aomori-food.jpg" width="560" height="747" loading="lazy" alt="Aomori food guide cover: a sashimi rice bowl with salmon, tuna and scallop">
-            <span class="guide-num">No.02</span>
           </span>
           <span class="guide-body">
             <span class="guide-region">Aomori · Aomori City</span>
             <span class="guide-title">Eat Aomori</span>
             <span class="guide-meta">5 dishes and 6 addresses, all inside the city.</span>
-            <span class="guide-state"><span class="dot" aria-hidden="true"></span>Guides live</span>
+            <span class="guide-state"><span class="dot" aria-hidden="true"></span>8 guides live</span>
           </span>
         </a>
       </div>
@@ -727,7 +718,7 @@
     <div class="container">
       <div class="sec-head">
         <p class="eyebrow"><span class="num">04</span> Travel prep, booked before you fly</p>
-        <h2>The four things <em>worth sorting early.</em></h2>
+        <h2>The three things <em>worth sorting early.</em></h2>
         <p class="sec-sub">Data before you land, a rail pass if the arithmetic works, and one booked experience for the day the weather turns. Links marked <strong>ad</strong> are affiliate links — the price you pay is the same.</p>
       </div>
 
@@ -777,6 +768,7 @@
                 <tr><th scope="row">Tokyo → Aomori, Hayabusa one way</th><td>¥17,910</td></tr>
                 <tr class="total"><th scope="row">Same trip as a return</th><td>¥35,820</td></tr>
                 <tr class="pass"><th scope="row">JR EAST PASS, 5 days</th><td>¥35,000</td></tr>
+                <tr class="save"><th scope="row">A return, against the pass</th><td>¥820 more</td></tr>
               </tbody>
             </table>
             <p class="fine">2 h 58 min each way; the pass also covers Sendai, Morioka, Akita, the Aoimori Railway and the Sanriku Railway. Foreign passport required; Hayabusa seats are reserved separately. Fares are the ordinary reserved-seat price, checked November 2026 — confirm on the day you buy.</p>

@@ -24,14 +24,18 @@
     </image:image>
     <image:image>
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-kyoto.jpg</image:loc>
-      <image:title>Kyoto in bloom — cherry blossom day tour for spring 2027</image:title>
+      <image:title>Kyoto in bloom — cherry blossom guide for spring 2027</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-tokyo.jpg</image:loc>
-      <image:title>Tokyo in bloom — five sakura spots in one day</image:title>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-kyoto-card.jpg</image:loc>
+      <image:title>Kyoto cherry blossom day tour — Fushimi, Sewari-tei and Daigo-ji</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-fuji.jpg</image:loc>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-tokyo-card.jpg</image:loc>
+      <image:title>Tokyo cherry blossom day tour — five sakura spots in one loop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-fuji-card.jpg</image:loc>
       <image:title>Mount Fuji and cherry blossoms at Lake Kawaguchi</image:title>
     </image:image>
   </url>

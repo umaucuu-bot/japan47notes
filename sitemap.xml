@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://umaucuu-bot.github.io/japan47notes/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,10 +18,26 @@
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-aomori-winter.jpg</image:loc>
       <image:title>Aomori City — winter in Aomori guide</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-iwate.jpg</image:loc>
+      <image:title>Morioka, Iwate — the walkable castle town 2 h 10 min from Tokyo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-kyoto.jpg</image:loc>
+      <image:title>Kyoto in bloom — cherry blossom day tour for spring 2027</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-tokyo.jpg</image:loc>
+      <image:title>Tokyo in bloom — five sakura spots in one day</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-fuji.jpg</image:loc>
+      <image:title>Mount Fuji and cherry blossoms at Lake Kawaguchi</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://umaucuu-bot.github.io/japan47notes/japan-47-prefectures-checklist.pdf</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

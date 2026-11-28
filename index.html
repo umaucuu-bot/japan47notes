@@ -1565,9 +1565,14 @@
   tabs.forEach(function(t){
     t.addEventListener('click', function(){ region = t.getAttribute('data-region'); apply(); });
   });
+  function searchChanged(){
+    /* a search is always across all 47 — typing resets a region filter */
+    if(search && search.value.trim() !== '' && region !== 'all'){ region = 'all'; }
+    apply();
+  }
   if(search){
-    search.addEventListener('input', apply);
-    search.addEventListener('search', apply);
+    search.addEventListener('input', searchChanged);
+    search.addEventListener('search', searchChanged);
   }
   if(moreBtn){
     moreBtn.addEventListener('click', function(){ expanded = !expanded; apply(); });

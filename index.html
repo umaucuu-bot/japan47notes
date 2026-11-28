@@ -55,8 +55,8 @@
     background:var(--cream);
     color:var(--ink);
     font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
-    font-size:16.5px;
-    line-height:1.7;
+    font-size:16px;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
   }
@@ -97,8 +97,8 @@
   .site-nav .nav-cta:hover{background:#a32f26;color:var(--cream);}
 
   /* ---------- hero ---------- */
-  .hero{padding:clamp(40px,5.6vw,76px) 0 clamp(30px,4vw,48px);}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(32px,5vw,68px);align-items:center;}
+  .hero{padding:clamp(20px,2.8vw,40px) 0 clamp(14px,2vw,24px);}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(24px,3.4vw,48px);align-items:center;}
   .eyebrow{
     display:flex;align-items:center;gap:10px;
     margin:0 0 18px;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--verm);
@@ -106,11 +106,11 @@
   .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.65;flex:0 0 auto;}
   h1{
     font-family:"Playfair Display",Georgia,serif;font-weight:600;
-    font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.02;letter-spacing:-.024em;
-    margin:0 0 24px;
+    font-size:clamp(2.2rem,4.6vw,3.5rem);line-height:1.03;letter-spacing:-.024em;
+    margin:0 0 12px;
   }
   h1 em{font-style:italic;font-weight:500;color:var(--forest);}
-  .lead{font-size:clamp(1rem,1.35vw,1.1rem);line-height:1.74;color:var(--ink-soft);margin:0 0 30px;max-width:34em;}
+  .lead{font-size:clamp(1rem,1.35vw,1.08rem);line-height:1.62;color:var(--ink-soft);margin:0 0 16px;max-width:34em;}
   .lead strong{font-weight:600;color:var(--ink);}
   .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch;}
   .btn{
@@ -124,17 +124,17 @@
   .btn-ghost{border:1px solid #D6C9AC;color:var(--ink);background:transparent;}
   .btn-ghost:hover{border-color:var(--forest);background:rgba(31,59,51,.04);}
   .stats{
-    display:flex;flex-wrap:wrap;gap:16px 30px;margin:34px 0 0;padding:20px 0 0;border-top:1px solid var(--rule);
+    display:flex;flex-wrap:wrap;gap:12px 26px;margin:14px 0 0;padding:10px 0 0;border-top:1px solid var(--rule);
     list-style:none;
   }
   .stats li{display:flex;flex-direction:column;gap:1px;}
-  .stats b{font-family:"Playfair Display",Georgia,serif;font-size:23px;font-weight:600;line-height:1.15;}
+  .stats b{font-family:"Playfair Display",Georgia,serif;font-size:20px;font-weight:600;line-height:1.15;}
   .stats span{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 
   .hero-figure{margin:0;position:relative;}
   .hero-figure img{
     width:100%;border-radius:6px;border:1px solid var(--rule);
-    box-shadow:var(--shadow);
+    box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover;max-height:440px;
   }
   .hero-figure figcaption{
     display:flex;align-items:flex-start;gap:9px;margin-top:12px;
@@ -160,12 +160,14 @@
   .live-chip:hover{border-color:#CDBF9F;color:var(--ink);}
   .live-chip.is-new{border-color:rgba(184,57,47,.35);color:var(--verm);}
   .live-chip.is-new b{color:var(--verm);}
+  .live-latest{margin-left:auto;font-size:11px;color:var(--muted);letter-spacing:.02em;line-height:1.4;text-align:right;}
+  @media (max-width:980px){.live-latest{display:none;}}
 
   /* ---------- latest strip ---------- */
   .ticker{background:transparent;border-bottom:1px solid var(--rule);}
   .ticker-inner{
-    display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:11px 24px;
-    font-size:12.5px;line-height:1.55;color:var(--ink-soft);
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:8px 24px;
+    font-size:12.5px;line-height:1.5;color:var(--ink-soft);
   }
   .ticker-label{
     font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -175,16 +177,16 @@
   .ticker .text-link{font-size:12.5px;}
 
   /* ---------- sections ---------- */
-  section{padding:clamp(48px,6vw,84px) 0;}
-  .sec-head{max-width:46rem;margin-bottom:clamp(26px,3.4vw,42px);}
+  section{padding:clamp(22px,2.2vw,30px) 0;}
+  .sec-head{max-width:46rem;margin-bottom:clamp(12px,1.7vw,17px);}
   .sec-head .eyebrow{margin-bottom:14px;}
   .eyebrow .num{font-variant-numeric:tabular-nums;opacity:.7;font-weight:500;}
   h2{
     font-family:"Playfair Display",Georgia,serif;font-weight:600;
-    font-size:clamp(1.7rem,3.1vw,2.45rem);line-height:1.16;letter-spacing:-.017em;margin:0 0 14px;
+    font-size:clamp(1.65rem,2.9vw,2.2rem);line-height:1.14;letter-spacing:-.017em;margin:0 0 8px;
   }
   h2 em{font-style:italic;color:var(--forest);}
-  .sec-sub{margin:0;color:var(--ink-soft);font-size:15px;line-height:1.72;}
+  .sec-sub{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.58;}
   .sec-head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;max-width:none;}
   .sec-head-row > div{max-width:46rem;}
   .text-link{
@@ -194,13 +196,32 @@
   .text-link:hover{border-bottom-color:var(--forest);}
 
   /* ---------- featured guides ---------- */
-  .guides{border-bottom:1px solid var(--rule);padding-bottom:clamp(48px,6vw,84px);}
-  .guide-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2vw,24px);}
+  .guides{border-bottom:1px solid var(--rule);padding-bottom:clamp(28px,3.2vw,48px);}
+  .rail-wrap{position:relative;}
+  .guide-grid{
+    --rg:clamp(12px,1.4vw,18px);display:flex;gap:var(--rg);
+    overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    padding:2px 0 4px;scrollbar-width:none;
+  }
+  .guide-grid::-webkit-scrollbar{display:none;}
+  .guide-grid > .guide{flex:0 0 calc((100% - 3*var(--rg))/4);scroll-snap-align:start;}
+  .rail-btn{
+    position:absolute;top:34%;z-index:3;width:38px;height:38px;border-radius:50%;
+    background:rgba(255,252,244,.95);border:1px solid var(--rule);color:var(--ink);
+    display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+    box-shadow:0 6px 18px rgba(34,32,29,.14);font-size:15px;line-height:1;
+    transition:background .15s ease,border-color .15s ease,opacity .15s ease;
+  }
+  .rail-btn:hover{background:#fff;border-color:#CDBF9F;}
+  .rail-btn[disabled]{opacity:.25;cursor:default;}
+  .rail-btn.prev{left:-13px;}
+  .rail-btn.next{right:-13px;}
+  .rail-hint{display:none;}
   .guide{display:block;text-decoration:none;color:inherit;}
   .guide-media{
     display:block;position:relative;overflow:hidden;border-radius:5px;
     border:1px solid var(--rule);background:var(--cream-deep);
-    aspect-ratio:3/4;
+    aspect-ratio:16/10;
   }
   .guide-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1);}
   .guide:hover .guide-media img{transform:scale(1.035);}
@@ -210,13 +231,13 @@
     font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
     background:rgba(255,252,244,.94);color:var(--verm);border-radius:100px;padding:4px 9px;
   }
-  .guide-body{display:block;padding:12px 2px 0;}
+  .guide-body{display:block;padding:9px 2px 0;}
   .guide-region{display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--verm);font-weight:600;}
   .guide-title{
     display:block;font-family:"Playfair Display",Georgia,serif;font-size:1.09rem;font-weight:600;
     line-height:1.28;margin-top:5px;transition:color .15s ease;
   }
-  .guide-meta{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:5px;min-height:2.7em;}
+  .guide-meta{display:block;font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:3px;}
   .guide-state{
     display:inline-flex;align-items:center;gap:6px;margin-top:8px;
     font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#31684D;font-weight:600;
@@ -225,14 +246,25 @@
 
   /* ---------- seasonal spotlights ---------- */
   .seasonal{background:linear-gradient(180deg,#FBF6EA 0%,rgba(249,244,232,0) 70%);border-bottom:1px solid var(--rule);}
-  .season-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.4vw,28px);align-items:stretch;}
+  [data-panel][hidden]{display:none !important;}
+  [data-panel]{scroll-margin-top:80px;}
+  .tabbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 clamp(14px,1.8vw,20px);}
+  .tabbtn{
+    appearance:none;cursor:pointer;font:inherit;font-size:12.5px;font-weight:600;letter-spacing:.02em;
+    color:var(--ink-soft);background:var(--paper);border:1px solid var(--rule);border-radius:100px;
+    padding:0 16px;min-height:42px;display:inline-flex;align-items:center;gap:7px;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .tabbtn:hover{border-color:#CDBF9F;color:var(--ink);}
+  .tabbtn[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:var(--cream);}
+  .tabbtn .t-k{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.72;}
   .season{
-    display:flex;flex-direction:column;background:var(--paper);
+    display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);background:var(--paper);
     border:1px solid var(--rule);border-radius:9px;overflow:hidden;
     transition:box-shadow .2s ease,border-color .2s ease;
   }
   .season:hover{box-shadow:0 14px 34px rgba(34,32,29,.08);border-color:#DCCDB0;}
-  .season-media{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--cream-deep);}
+  .season-media{display:block;position:relative;overflow:hidden;background:var(--cream-deep);min-height:100%;}
   .season-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.3,1);}
   .season:hover .season-media img{transform:scale(1.025);}
   .season-tag{
@@ -240,7 +272,7 @@
     font-size:9.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
     background:rgba(34,32,29,.74);color:#FFF7EC;border-radius:100px;padding:5px 10px;
   }
-  .season-body{display:flex;flex-direction:column;flex:1;padding:20px 22px 18px;}
+  .season-body{display:flex;flex-direction:column;flex:1;padding:clamp(15px,1.8vw,22px) clamp(15px,1.8vw,24px);min-width:0;}
   .season-top{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap;}
   .badge{
     font-size:9.5px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;
@@ -261,9 +293,9 @@
   .bloom-mini .place{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:600;display:block;}
   .bloom-mini .date{display:block;font-family:"Playfair Display",Georgia,serif;font-size:.98rem;line-height:1.25;margin-top:2px;}
 
-  .offers{list-style:none;margin:8px 0 0;padding:0;}
-  .offer{padding:14px 0 12px;border-top:1px solid var(--rule);}
-  .offer:first-child{border-top:0;padding-top:12px;}
+  .offers{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));column-gap:20px;}
+  .offer{padding:11px 0 8px;border-top:1px solid var(--rule);}
+  .offer:first-child{border-top:0;padding-top:8px;}
   .offer-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px 14px;flex-wrap:wrap;}
   .offer h4{font-family:"Playfair Display",Georgia,serif;font-size:1.02rem;font-weight:600;line-height:1.3;margin:0;}
   .offer h4 a{text-decoration:none;}
@@ -279,7 +311,7 @@
   }
   .offer-go:hover{border-bottom-color:var(--forest);}
   .offer-go .ad{margin-left:2px;}
-  .season-fine{margin:14px 0 0;padding-top:2px;font-size:10.5px;line-height:1.6;color:var(--muted-light);}
+  .season-fine{margin:9px 0 0;padding-top:0;font-size:10.5px;line-height:1.55;color:var(--muted-light);}
 
   /* ---------- checklist ---------- */
   .checklist{background:var(--forest);color:#F6F1E4;}
@@ -288,8 +320,8 @@
   .check-copy h2{color:#FFFDF6;font-size:clamp(1.62rem,2.7vw,2.16rem);}
   .check-copy h2 em{color:#F3D9A8;}
   .check-copy .sec-sub{color:rgba(246,241,228,.78);}
-  .check-facts{list-style:none;margin:24px 0 28px;padding:0;display:grid;gap:9px;}
-  .check-facts li{display:flex;gap:10px;font-size:13.5px;color:rgba(246,241,228,.84);line-height:1.55;}
+  .check-facts{list-style:none;margin:18px 0 20px;padding:0;display:grid;gap:6px;}
+  .check-facts li{display:flex;gap:9px;font-size:12.8px;color:rgba(246,241,228,.84);line-height:1.5;}
   .check-facts li::before{content:"";flex:0 0 auto;width:5px;height:5px;border-radius:50%;background:#E9C98C;margin-top:9px;}
   .download-cta{
     display:flex;align-items:center;gap:14px;text-decoration:none;
@@ -310,8 +342,6 @@
     width:100%;border:1px solid rgba(246,241,228,.28);border-radius:4px;background:#fff;
     box-shadow:0 8px 22px rgba(0,0,0,.18);
   }
-  .previews figure:nth-child(2){transform:translateY(20px);}
-  .previews figure:nth-child(3){transform:translateY(6px);}
   .previews figcaption{
     margin-top:8px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(246,241,228,.6);text-align:center;
   }
@@ -321,9 +351,9 @@
   /* ---------- roadmap ---------- */
   .roadmap-panel{
     background:var(--paper);border:1px solid var(--rule);border-radius:9px;
-    padding:clamp(20px,3vw,32px);
+    padding:clamp(14px,1.8vw,22px);
   }
-  .roadmap-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px;}
+  .roadmap-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:10px;}
   .search{
     display:flex;align-items:center;gap:9px;flex:1 1 240px;min-width:0;
     border:1px solid var(--rule);border-radius:100px;background:var(--cream);padding:0 14px;
@@ -335,7 +365,7 @@
   }
   .search input::placeholder{color:var(--muted-light);}
   .search:focus-within{border-color:var(--forest);box-shadow:0 0 0 3px rgba(31,59,51,.08);}
-  .region-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+  .region-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
   .region-tab{
     appearance:none;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.04em;font-weight:500;
     color:var(--ink-soft);background:transparent;border:1px solid var(--rule);border-radius:100px;
@@ -343,12 +373,12 @@
   }
   .region-tab:hover{border-color:#CDBF9F;}
   .region-tab[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--cream);}
-  .roadmap-count{margin:0 0 18px;font-size:12px;color:var(--muted);letter-spacing:.03em;}
-  .pref-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;}
+  .roadmap-count{margin:0 0 12px;font-size:12px;color:var(--muted);letter-spacing:.03em;}
+  .pref-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));gap:7px;}
   .pref{
     display:flex;flex-direction:column;gap:1px;justify-content:center;
     border:1px solid var(--rule);border-radius:5px;background:var(--cream);
-    padding:9px 11px;min-height:58px;text-decoration:none;color:inherit;
+    padding:8px 10px;min-height:50px;text-decoration:none;color:inherit;
     position:relative;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease;
   }
   .pref[hidden]{display:none;}
@@ -365,7 +395,7 @@
   .pref.is-next .state{color:var(--verm);}
   .no-match{margin:14px 0 0;font-size:13px;color:var(--muted);display:none;}
   .no-match.on{display:block;}
-  .more-row{display:flex;justify-content:center;margin-top:18px;}
+  .more-row{display:flex;justify-content:center;margin-top:12px;}
   .btn-more{
     appearance:none;cursor:pointer;font:inherit;font-size:12.5px;font-weight:600;letter-spacing:.05em;
     color:var(--forest);background:var(--cream);border:1px solid var(--rule);border-radius:100px;
@@ -373,10 +403,11 @@
   }
   .btn-more:hover{border-color:var(--forest);background:rgba(31,59,51,.04);}
   .roadmap-foot{
-    display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;
-    margin-top:22px;padding-top:18px;border-top:1px solid var(--rule);
+    display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+    margin-top:8px;padding-top:10px;border-top:1px solid var(--rule);
   }
   .progress{flex:1 1 240px;min-width:200px;}
+  .roadmap-foot .lbl{margin:0;font-size:11.5px;letter-spacing:.03em;color:var(--muted);}
   .progress .bar{height:4px;border-radius:4px;background:var(--cream-deep);overflow:hidden;}
   .progress .bar span{display:block;height:100%;width:8.5%;background:var(--forest);border-radius:4px;}
   .progress .lbl{margin-top:7px;font-size:11.5px;letter-spacing:.03em;color:var(--muted);}
@@ -398,23 +429,22 @@
   .step .text-link{font-size:12px;}
 
   /* ---------- travel prep ---------- */
-  .prep-block + .prep-block{margin-top:clamp(36px,4vw,56px);}
   .prep-h{
-    display:flex;align-items:baseline;gap:12px;margin:0 0 6px;
-    font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.25rem,2.1vw,1.55rem);font-weight:600;letter-spacing:-.01em;
+    display:flex;align-items:baseline;gap:10px;margin:0 0 4px;
+    font-family:"Playfair Display",Georgia,serif;font-size:clamp(1.15rem,1.7vw,1.4rem);font-weight:600;letter-spacing:-.01em;
   }
   .prep-h .chip{
     font-family:"Inter",sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
     color:var(--verm);border:1px solid rgba(184,57,47,.3);border-radius:3px;padding:3px 7px;position:relative;top:-3px;
   }
-  .prep-sub{margin:0 0 18px;font-size:14px;color:var(--muted);max-width:48rem;}
+  .prep-sub{margin:0 0 12px;font-size:13.5px;line-height:1.55;color:var(--muted);max-width:48rem;}
 
   .card-grid{display:grid;gap:14px;align-items:start;}
   .cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
   .ecard{
     display:flex;flex-direction:column;gap:0;
     background:var(--paper);border:1px solid var(--rule);border-radius:7px;
-    padding:20px 20px 18px;text-decoration:none;color:inherit;
+    padding:15px 16px 13px;text-decoration:none;color:inherit;
     transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease;
   }
   a.ecard:hover{transform:translateY(-2px);border-color:#D3C4A2;box-shadow:0 10px 24px rgba(34,32,29,.07);}
@@ -424,11 +454,11 @@
     font-family:"Playfair Display",Georgia,serif;font-size:1.16rem;font-weight:600;line-height:1.3;margin:0 0 6px;
   }
   .ecard p{margin:0;font-size:13px;line-height:1.6;color:var(--ink-soft);}
-  .ecard .facts{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:5px;}
-  .ecard .facts li{display:flex;gap:8px;font-size:12px;line-height:1.5;color:var(--muted);}
+  .ecard .facts{list-style:none;margin:9px 0 0;padding:0;display:grid;gap:4px;}
+  .ecard .facts li{display:flex;gap:8px;font-size:11.5px;line-height:1.45;color:var(--muted);}
   .ecard .facts li::before{content:"";flex:0 0 auto;width:4px;height:4px;border-radius:50%;background:var(--gold);margin-top:7px;}
   .ecard .go{
-    margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);
+    margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);
     font-size:11.5px;font-weight:600;letter-spacing:.04em;color:var(--forest);
     display:flex;align-items:center;justify-content:space-between;gap:10px;
   }
@@ -450,7 +480,7 @@
   /* currency switch */
   .currency-bar{
     display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;
-    margin:0 0 clamp(22px,3vw,30px);padding:9px 12px;
+    margin:0 0 clamp(12px,1.6vw,16px);padding:7px 10px;
     background:var(--paper);border:1px solid var(--rule);border-radius:7px;
   }
   .cur-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;}
@@ -467,7 +497,7 @@
   /* eSIM comparison table */
   .compare-wrap{overflow-x:auto;margin:16px 0 0;}
   .compare{width:100%;min-width:560px;border-collapse:collapse;font-size:13px;background:var(--paper);border:1px solid var(--rule);border-radius:8px;}
-  .compare th,.compare td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5;}
+  .compare th,.compare td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.42;}
   .compare thead th{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;background:var(--cream-deep);}
   .compare tbody th{font-weight:500;color:var(--muted);width:26%;}
   .compare td{color:var(--ink-soft);}
@@ -480,7 +510,7 @@
   /* rail feature */
   .rail-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:14px;align-items:stretch;}
   .rail-feature{
-    background:var(--forest);color:#F6F1E4;border-radius:9px;padding:clamp(22px,3vw,34px);
+    background:var(--forest);color:#F6F1E4;border-radius:9px;padding:clamp(16px,2vw,24px);
     display:flex;flex-direction:column;text-decoration:none;
     box-shadow:0 12px 30px rgba(31,59,51,.18);transition:transform .15s ease;
   }
@@ -534,7 +564,7 @@
   .faq-item:first-child{border-top:1px solid var(--rule);}
   .faq-item summary{
     cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:16px;justify-content:space-between;
-    padding:18px 0;font-size:15px;font-weight:600;line-height:1.5;color:var(--ink);min-height:56px;
+    padding:11px 0;font-size:14.5px;font-weight:600;line-height:1.45;color:var(--ink);min-height:44px;
   }
   .faq-item summary::-webkit-details-marker{display:none;}
   .faq-item summary:hover{color:var(--forest);}
@@ -547,7 +577,8 @@
   .faq-ico::before{width:9px;height:1px;}
   .faq-ico::after{width:1px;height:9px;transition:transform .2s ease;}
   .faq-item[open] .faq-ico::after{transform:translate(-50%,-50%) scaleY(0);}
-  .faq-a{padding:0 46px 20px 0;font-size:13.5px;line-height:1.72;color:var(--ink-soft);max-width:46rem;}
+  .faq-item[hidden]{display:none;}
+  .faq-a{padding:0 40px 14px 0;font-size:13.5px;line-height:1.65;color:var(--ink-soft);max-width:46rem;}
   .faq-a p{margin:0 0 10px;}
   .faq-a p:last-child{margin-bottom:0;}
   .faq-a a{color:var(--forest);}
@@ -555,7 +586,7 @@
   /* ---------- follow / disclosure / footer ---------- */
   .follow{border-top:1px solid var(--rule);text-align:center;}
   .follow h2{margin-bottom:10px;}
-  .follow p{color:var(--ink-soft);max-width:40rem;margin:0 auto 24px;}
+  .follow p{color:var(--ink-soft);max-width:40rem;margin:0 auto 12px;}
   .pinterest-btn{
     display:inline-flex;align-items:center;gap:9px;text-decoration:none;min-height:46px;
     border:1px solid var(--forest);color:var(--forest);border-radius:100px;padding:11px 22px;
@@ -563,10 +594,10 @@
   }
   .pinterest-btn:hover{background:var(--forest);color:var(--cream);}
   .pinterest-btn .dot{background:var(--verm);box-shadow:none;width:8px;height:8px;}
-  .board-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px;}
+  .board-links{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-top:12px;}
   .board-links a{
-    font-size:12px;text-decoration:none;color:var(--ink-soft);
-    border:1px solid var(--rule);border-radius:100px;padding:8px 14px;background:var(--paper);
+    font-size:10.5px;text-decoration:none;color:var(--ink-soft);
+    border:1px solid var(--rule);border-radius:100px;padding:4px 9px;background:var(--paper);white-space:nowrap;
   }
   .board-links a:hover{border-color:#CDBF9F;color:var(--ink);}
   .board-links a.is-sakura{color:var(--sakura);border-color:rgba(176,90,103,.35);}
@@ -574,14 +605,14 @@
 
   .disclosure{
     max-width:54rem;margin:0 auto;text-align:left;background:var(--cream-deep);border-radius:7px;
-    padding:18px 20px;font-size:12px;line-height:1.7;color:var(--muted);scroll-margin-top:80px;
+    padding:12px 14px;font-size:11.2px;line-height:1.56;color:var(--muted);scroll-margin-top:80px;
   }
   .disclosure strong{
     display:block;color:var(--verm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
     font-weight:600;margin-bottom:6px;
   }
   .disclosure a{color:var(--ink-soft);}
-  footer{border-top:1px solid var(--rule);padding:34px 0 46px;text-align:center;}
+  footer{border-top:1px solid var(--rule);padding:12px 0 18px;text-align:center;}}
   .closing{
     display:block;font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.15rem;
     color:var(--ink);margin-bottom:10px;
@@ -600,25 +631,29 @@
 
   /* ---------- responsive ---------- */
   @media (max-width:1080px){
-    .guide-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .guide-grid > .guide{flex-basis:calc((100% - 2*var(--rg))/3);}
+    .vertical{display:none;}
   }
   @media (max-width:1040px){
     .site-nav{gap:18px;font-size:11px;}
   }
   @media (max-width:980px){
-    .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .guide-grid > .guide{flex-basis:calc((100% - var(--rg))/2);}
     .rail-grid{grid-template-columns:1fr;}
     .rail-side{flex-direction:row;}
-    .season-grid{grid-template-columns:1fr;}
-    .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 0;}
+    .season{grid-template-columns:1fr;}
+    .season-media{aspect-ratio:16/9;min-height:0;}
+    .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 0;}
     .step:nth-child(2)::after{display:none;}
+    .rail-btn{display:none;}
   }
   @media (max-width:860px){
-    .hero-grid{grid-template-columns:1fr;gap:34px;}
-    .hero-figure{max-width:420px;}
+    .hero-grid{grid-template-columns:1fr;gap:22px;}
+    .hero-figure{max-width:460px;}
+    .hero-figure img{max-height:320px;}
     .vertical{display:none;}
-    h1{font-size:clamp(2.3rem,8vw,3.4rem);}
-    .check-grid{grid-template-columns:1fr;gap:36px;}
+    h1{font-size:clamp(2.2rem,7.6vw,3.2rem);line-height:1.04;}
+    .check-grid{grid-template-columns:1fr;gap:24px;}
     .previews{max-width:520px;}
   }
   @media (max-width:760px){
@@ -641,7 +676,7 @@
     .live-inner{padding:11px 18px;}
     .live-chip{min-height:36px;font-size:11.5px;}
     .ticker-inner{padding:10px 18px;}
-    .ticker p{font-size:12px;flex:1 1 100%;}
+    .ticker p{font-size:11.5px;flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
     .cur-btn{min-height:42px;padding:7px 16px;font-size:13px;}
     .currency-bar{padding:8px 10px;gap:6px 10px;}
     .cur-note{font-size:10px;margin-left:0;width:100%;}
@@ -660,9 +695,10 @@
     .stats{gap:0 16px;row-gap:14px;}
     .stats b{font-size:20px;}
     .stats span{font-size:10px;letter-spacing:.06em;}
-    .guide-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;}
+    .guide-grid{--rg:12px;}
+    .guide-grid > .guide{flex:0 0 68%;}
     .guide-title{font-size:1rem;}
-    .guide-meta{font-size:11px;min-height:3em;}
+    .guide-meta{font-size:11px;}
     .guide-region{font-size:9px;letter-spacing:.1em;}
     .guide-state{font-size:9px;}
     .previews figure:nth-child(2),.previews figure:nth-child(3){transform:none;}
@@ -670,7 +706,7 @@
       display:flex;gap:12px;overflow-x:auto;padding-bottom:6px;
       scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;max-width:none;
     }
-    .previews figure{flex:0 0 62%;scroll-snap-align:start;}
+    .previews figure{flex:0 0 40%;scroll-snap-align:start;}
     .previews::-webkit-scrollbar{height:0;}
     .cols-2{grid-template-columns:1fr;}
     .rail-side{flex-direction:column;}
@@ -679,27 +715,56 @@
     .pref .name{font-size:12px;}
     .cta-row .btn{width:100%;}
     .download-cta{max-width:none;}
-    .season-body{padding:18px 18px 16px;}
+    .season-body{padding:14px 15px 13px;}
+    .hero-figure img{max-height:240px;}
+    .tabbtn{min-height:44px;padding:0 14px;font-size:12px;}
+    .rail-hint{
+      display:flex;align-items:center;gap:6px;margin:8px 0 0;
+      font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-light);
+    }
     .offer h4{font-size:.98rem;}
     .offer-head{display:block;}
     .offer-price{display:block;text-align:left;margin-top:5px;}
     .offer-price .p-main{font-size:1.12rem;}
     .offer-price .p-alt{display:inline;margin-left:6px;font-size:10.5px;}
     .bloom-mini .date{font-size:.9rem;}
-    .timeline{grid-template-columns:1fr;gap:22px;}
-    .step{padding:0;}
+    .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px;}
+    .step{padding:0 0 0 15px;}
+    .step::before{top:1px;}
     .step::after{display:none;}
-    .step-inner{padding-top:14px;}
+    .step-inner{padding-top:0;}
+    .step h3{font-size:1.02rem;}
+    .step p{font-size:12px;line-height:1.5;}
     .faq-item summary{font-size:14px;padding:16px 0;}
     .faq-a{padding-right:0;}
     .compare{min-width:0;font-size:12px;}
     .compare th,.compare td{padding:10px;}
     .compare thead th{font-size:9.5px;letter-spacing:.05em;}
+    .cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .cta-row .btn{width:auto;padding:10px 13px;min-height:50px;font-size:13.5px;}
+    .cta-row .btn small{font-size:9.5px;line-height:1.35;}
+    .ticker-inner{flex-wrap:nowrap;gap:8px;padding:7px 18px;}
+    .ticker-label{display:none;}
+    .ticker p{font-size:11px;}
+    .ticker .text-link{font-size:11px;}
+    .region-tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+    .region-tabs::-webkit-scrollbar{display:none;}
+    .region-tab{flex:0 0 auto;}
+    #esim .ecard .facts{display:none;}
+    .board-links{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;margin:14px -18px 0;padding:0 18px 2px;}
+    .board-links::-webkit-scrollbar{display:none;}
+    .compare{font-size:11px;}
+    .compare th,.compare td{padding:6px 7px;}
+    .disclosure{font-size:11px;line-height:1.55;}
+  }
+  @media (max-width:480px){
+    .step .text-link{white-space:normal;line-height:1.35;}
   }
   @media (max-width:365px){
     .brand span{display:none;}
-    .guide-grid{grid-template-columns:1fr;}
-    .guide-media{aspect-ratio:4/3;}
+    .guide-grid > .guide{flex:0 0 86%;}
+    .sec-head-row{display:block;}
+    .sec-head-row .text-link{margin-top:8px;}
   }
   @media print{
     .site-head,.hero-figure,.region-tabs,.rail-feature,.previews,.ticker,.search,.more-row{display:none;}
@@ -786,6 +851,7 @@
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2"> (function () { var script = document.createElement("script"); script.async = 1; script.setAttribute("data-cmp-ab","2"); script.src = 'https://emrldtp.com/NjA3MzI3.js?t=607327'; document.head.appendChild(script); })(); </script>
 </head>
 <body>
+<noscript><style>.tabbar{display:none;} [data-panel][hidden]{display:block !important;}</style></noscript>
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
@@ -812,7 +878,7 @@
       <div class="hero-copy">
         <p class="eyebrow">A prefecture-by-prefecture guide to Japan</p>
         <h1>Japan,<br><em>one prefecture</em><br>at a time.</h1>
-        <p class="lead">Forty-seven prefectures, one at a time, built from inside the city: station walks, real opening hours, and the arithmetic on rail passes. Four are live — <strong>Sapporo, Aomori, Morioka and Sendai</strong> — and winter is the season they were written for. Start with the free 47 prefectures checklist, then take the guides one prefecture at a time.</p>
+        <p class="lead">Forty-seven prefectures, one at a time, built from inside the city: station walks, real opening hours, and the arithmetic on rail passes. Four are live — <strong>Sapporo, Aomori, Morioka and Sendai</strong> — and winter is the season they were written for.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="japan-47-prefectures-checklist.pdf" download>
             Get the free checklist
@@ -845,14 +911,7 @@
       <a class="live-chip" href="https://www.pinterest.com/japan47notes/02-aomori-aomori-city/" target="_blank" rel="noopener"><b>02</b> Aomori</a>
       <a class="live-chip" href="https://www.pinterest.com/japan47notes/03-iwate-morioka/" target="_blank" rel="noopener"><b>03</b> Morioka</a>
       <a class="live-chip is-new" href="https://www.pinterest.com/japan47notes/04-miyagi-sendai/" target="_blank" rel="noopener"><b>04</b> Sendai · new</a>
-    </div>
-  </div>
-
-  <div class="ticker">
-    <div class="container ticker-inner">
-      <span class="ticker-label">Latest</span>
-      <p>04 Miyagi — Sendai is live · Iwate 24-pin series complete · Winter Ski 2026–27 &amp; Sakura 2027 tours on sale · 79 pins published</p>
-      <a class="text-link" href="#roadmap">See the roadmap →</a>
+      <span class="live-latest">Iwate's 24-pin series is complete · winter ski 2026–27 &amp; sakura 2027 tours on sale · 79 pins published</span>
     </div>
   </div>
 
@@ -863,12 +922,15 @@
         <div>
           <p class="eyebrow"><span class="num">01</span> Featured city guides</p>
           <h2>Four cities, <em>forty-three to go.</em></h2>
-          <p class="sec-sub">Each city gets a three-part guide of eight pins — what to see, what to eat, what to take home — and every address is a walk or one bus from the station. The two seasonal series run alongside them.</p>
+          <p class="sec-sub">Each city gets a three-part guide of eight pins — what to see, what to eat, what to take home — and every address is a walk or one bus from the station.</p>
         </div>
         <a class="text-link" href="https://www.pinterest.com/japan47notes/" target="_blank" rel="noopener">All guides on Pinterest →</a>
       </div>
 
-      <div class="guide-grid reveal">
+      <div class="rail-wrap">
+        <button class="rail-btn prev" type="button" id="guide-prev" aria-label="Previous guides" aria-controls="guide-rail" hidden>&#8592;</button>
+        <button class="rail-btn next" type="button" id="guide-next" aria-label="More guides" aria-controls="guide-rail">&#8594;</button>
+        <div class="guide-grid reveal" id="guide-rail">
         <a class="guide" href="https://www.pinterest.com/japan47notes/01-hokkaido-sapporo/" target="_blank" rel="noopener">
           <span class="guide-media">
             <img src="assets/guide-sapporo.jpg" width="560" height="747" loading="lazy" alt="A crowded Susukino crossing at night in the snow, shop signs glowing over wet pavement">
@@ -942,7 +1004,7 @@
           </span>
         </a>
 
-        <a class="guide" href="#seasonal">
+        <a class="guide" href="#winter" data-goto="winter">
           <span class="guide-media">
             <img src="assets/guide-winter-ski.jpg" width="560" height="747" loading="lazy" alt="Snow monsters on the Zao range — wind-shaped pines cased in white frost under a blue sky">
           </span>
@@ -954,7 +1016,7 @@
           </span>
         </a>
 
-        <a class="guide" href="#seasonal">
+        <a class="guide" href="#sakura" data-goto="sakura">
           <span class="guide-media">
             <img src="assets/guide-sakura.jpg" width="560" height="747" loading="lazy" alt="Cherry blossom covering a stone wall in Kyoto in dense pale-pink bloom">
           </span>
@@ -965,6 +1027,8 @@
             <span class="guide-state"><span class="dot" aria-hidden="true"></span>2027 dates on sale</span>
           </span>
         </a>
+        </div>
+        <p class="rail-hint">Swipe for the other guides <span aria-hidden="true">&#8594;</span></p>
       </div>
     </div>
   </section>
@@ -976,13 +1040,18 @@
         <div>
           <p class="eyebrow"><span class="num">02</span> Seasonal spotlights</p>
           <h2>Two seasons that <em>cannot be moved.</em></h2>
-          <p class="sec-sub">Winter is here now, and sakura is the one part of a Japan trip that sells out first. Below are the lift tickets and bus packages for the mountains these guides cover, and the 2027 sakura day tours already on sale. Prices in US$ with yen beside them — switch the currency in Travel prep to match what Klook shows you.</p>
+          <p class="sec-sub">Winter is here now, and sakura is the part of a trip that sells out first: lift tickets and bus packages for the mountains these guides cover, plus the 2027 sakura tours already on sale. Prices in US$ with yen beside them.</p>
         </div>
       </div>
 
-      <div class="season-grid reveal">
+      <div class="tabbar" role="tablist" aria-label="Seasonal spotlights">
+        <button class="tabbtn" type="button" role="tab" id="tab-winter" data-tab="winter" aria-selected="true" aria-controls="winter">Winter ski <span class="t-k">2026–27</span></button>
+        <button class="tabbtn" type="button" role="tab" id="tab-sakura" data-tab="sakura" aria-selected="false" aria-controls="sakura">Sakura <span class="t-k">2027</span></button>
+      </div>
+
+      <div class="reveal">
         <!-- Winter ski -->
-        <article class="season" id="winter">
+        <article class="season" id="winter" data-panel="winter" role="tabpanel" aria-labelledby="tab-winter">
           <a class="season-media" href="https://tp.media/r?campaign_id=137&amp;marker=807086&amp;p=4110&amp;sub_id=hakuba_ski&amp;trs=602272&amp;u=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F134921-hakuba-iwatake-snowfield-1-day-lift-ticket-gear-ski-suits-rental%2F" target="_blank" rel="sponsored noopener noreferrer">
             <img src="assets/season-winter.jpg" width="800" height="600" loading="lazy" alt="A skier on the open slope at Hakuba Iwatake with the snow-covered Northern Alps behind">
             <span class="season-tag">Winter ski · Dec–Mar</span>
@@ -990,7 +1059,7 @@
           <div class="season-body">
             <div class="season-top"><span class="badge alt">On sale now</span><span class="ad">ad</span></div>
             <h3>Winter ski 2026–27</h3>
-            <p class="season-intro">Two ways in without a car: a lift ticket you pick up at the mountain, and a bus-and-lift package out of central Sapporo. Both are booked per date — check the snow and the price for your day before you pay.</p>
+            <p class="season-intro">Two ways in without a car: a lift ticket picked up at the mountain, and a bus-and-lift package out of Sapporo. Both are booked per date — check the snow and the price for your day.</p>
             <ul class="offers">
               <li class="offer">
                 <div class="offer-head">
@@ -1009,12 +1078,12 @@
                 <a class="offer-go" href="https://tp.media/r?campaign_id=137&amp;marker=807086&amp;p=4110&amp;sub_id=rusutsu_ski&amp;trs=602272&amp;u=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F98771-rusutsu-ski-resort-1-day-lift-pass-bus-package%2F" target="_blank" rel="sponsored noopener noreferrer">Check dates on Klook <span aria-hidden="true">→</span> <span class="ad">ad</span></a>
               </li>
             </ul>
-            <p class="season-fine">Hakuba: lift only — skis, boots and a suit are a separate option at checkout, and the ticket is valid on the date you choose. Rusutsu: leaves five Sapporo hotels between 07:30 and 08:10, about six hours on the snow, back by 19:45; lunch and rental are not included. Prices and sales windows checked 27 November 2026.</p>
+            <p class="season-fine">Hakuba: lift only; skis, boots and a suit are a separate option, valid on the date you choose. Rusutsu: leaves five Sapporo hotels 07:30–08:10, about six hours on the snow, back by 19:45; lunch and rental not included. Checked 27 November 2026.</p>
           </div>
         </article>
 
         <!-- Sakura -->
-        <article class="season" id="sakura">
+        <article class="season" id="sakura" data-panel="sakura" role="tabpanel" aria-labelledby="tab-sakura" hidden>
           <a class="season-media" href="https://tp.media/r?campaign_id=137&amp;marker=807086&amp;p=4110&amp;sub_id=kyoto_sakura_tour&amp;trs=602272&amp;u=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F187828-kyoto-cherry-blossom-day-tour-fushimi-boat-sewaitei-tunnel-daigo%2F" target="_blank" rel="sponsored noopener noreferrer">
             <img src="assets/season-sakura.jpg" width="800" height="600" loading="lazy" alt="Rowboats on the water at Chidorigafuchi in Tokyo, cherry trees in full bloom along the bank">
             <span class="season-tag">Sakura 2027 · late Mar–mid Apr</span>
@@ -1054,7 +1123,7 @@
                 <a class="offer-go" href="https://tp.media/r?campaign_id=137&amp;marker=807086&amp;p=4110&amp;sub_id=fuji_sakura_tour&amp;trs=602272&amp;u=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F126536-arakurayama-sengen-park-lake-kawaguchi-one-day-tour-from-tokyo%2F" target="_blank" rel="sponsored noopener noreferrer">Check spring dates on Klook <span aria-hidden="true">→</span> <span class="ad">ad</span></a>
               </li>
             </ul>
-            <p class="season-fine">US$40.35 on the Fuji tour is a limited-time promotion against a list price near US$49. Boat rides, temple admission and lunch are extra on all three; none of them refunds because the bloom or weather is off. Prices and sales windows checked 26 November 2026.</p>
+            <p class="season-fine">US$40.35 on the Fuji tour is a limited-time promotion against a list price near US$49. Boat rides, temple admission and lunch are extra on all three; none refunds because the bloom or weather is off. Checked 26 November 2026.</p>
           </div>
         </article>
       </div>
@@ -1067,7 +1136,7 @@
       <div class="check-copy">
         <p class="eyebrow"><span class="num">03</span> The free checklist</p>
         <h2>All forty-seven, <em>on five pages.</em></h2>
-        <p class="sec-sub">Six regions, forty-seven prefectures, one line each on what not to miss, and a box to tick when you get there. The last page is the prep: data, money, rail, and what to pack for a northern winter.</p>
+        <p class="sec-sub">Six regions, forty-seven prefectures, one line each on what not to miss, and a box to tick when you get there. The last page is the prep: data, money, rail and winter packing.</p>
         <ul class="check-facts">
           <li>Every prefecture numbered 01–47, with the one thing worth the detour</li>
           <li>A4 PDF, 5 pages — fit to Letter when you print, or save it on your phone</li>
@@ -1109,7 +1178,7 @@
       <div class="sec-head">
         <p class="eyebrow"><span class="num">04</span> The 47 prefectures roadmap</p>
         <h2>Where the map stands <em>right now.</em></h2>
-        <p class="sec-sub">One guide per prefecture, published in order. Hokkaido, Aomori, Iwate and Miyagi are live; Akita is next. Search a name or filter by region to see what is coming to yours.</p>
+        <p class="sec-sub">One guide per prefecture, in order: Hokkaido, Aomori, Iwate and Miyagi are live, Akita is next. Search a name or filter by region to see what is coming to yours.</p>
       </div>
 
       <div class="roadmap-panel reveal">
@@ -1192,11 +1261,7 @@
         </div>
 
         <div class="roadmap-foot">
-          <div class="progress">
-            <div class="bar"><span></span></div>
-            <p class="lbl">4 of 47 prefectures live (8.5%) · a new city every week or so</p>
-          </div>
-          <a class="text-link" href="#checklist">Track it on the checklist →</a>
+          <p class="lbl">4 of 47 prefectures live (8.5%) · a new city every week or so</p>
         </div>
       </div>
     </div>
@@ -1208,7 +1273,7 @@
       <div class="sec-head">
         <p class="eyebrow"><span class="num">05</span> Before you go</p>
         <h2>The order to <em>book things in.</em></h2>
-        <p class="sec-sub">Most of what goes wrong on a first Japan trip is a timing problem, not a money one: the tour sells out, the pass has to be bought before you land, the eSIM gets installed at the airport on 4G. Four checkpoints, in the order they matter.</p>
+        <p class="sec-sub">Most of what goes wrong on a first Japan trip is a timing problem, not a money one: the tour sells out, the pass has to be bought before you land, the eSIM gets installed at the airport on 4G. Four checkpoints, in order.</p>
       </div>
 
       <ol class="timeline reveal">
@@ -1254,7 +1319,7 @@
       <div class="sec-head">
         <p class="eyebrow"><span class="num">06</span> Travel prep, booked before you fly</p>
         <h2>The three things <em>worth sorting early.</em></h2>
-        <p class="sec-sub">Data before you land, a rail pass if the arithmetic works, and one booked experience for the day the weather turns. Every price is shown in US$ with yen beside it — switch the currency below to match what Klook shows you. Links marked <strong>ad</strong> are affiliate links: the price you pay is the same.</p>
+        <p class="sec-sub">Data before you land, a rail pass if the arithmetic works, and one booked experience for the day the weather turns. Prices in US$ with yen beside them; links marked <strong>ad</strong> are affiliate links — the price you pay is the same.</p>
       </div>
 
       <div class="currency-bar">
@@ -1266,10 +1331,16 @@
         <span class="cur-note">Rough guide: ¥159 = US$1 · 26 November 2026</span>
       </div>
 
+      <div class="tabbar" role="tablist" aria-label="Travel prep">
+        <button class="tabbtn" type="button" role="tab" id="tab-esim" data-tab="esim" aria-selected="true" aria-controls="esim">eSIM data <span class="t-k">A</span></button>
+        <button class="tabbtn" type="button" role="tab" id="tab-rail" data-tab="rail" aria-selected="false" aria-controls="rail">Rail pass <span class="t-k">B</span></button>
+        <button class="tabbtn" type="button" role="tab" id="tab-experiences" data-tab="experiences" aria-selected="false" aria-controls="experiences">Tours <span class="t-k">C</span></button>
+      </div>
+
       <!-- eSIM -->
-      <div class="prep-block reveal" id="esim">
+      <div class="prep-block reveal" id="esim" data-panel="esim" role="tabpanel" aria-labelledby="tab-esim">
         <h3 class="prep-h"><span class="chip">A</span> Stay connected</h3>
-        <p class="prep-sub">Japan has no shortage of Wi-Fi and no shortage of reasons to want your own data. Two eSIMs cover almost every trip: pick the one that fits how long you are staying.</p>
+        <p class="prep-sub">Japan has plenty of Wi-Fi and plenty of reasons to want your own data. Two eSIMs cover almost every trip: pick the one that fits how long you stay.</p>
         <div class="card-grid cols-2">
           <a class="ecard" href="https://airalo.tpk.mx/VAb9OuJn" target="_blank" rel="sponsored noopener noreferrer">
             <span class="ecard-top"><span class="badge">The default choice</span><span class="ad">ad</span></span>
@@ -1315,7 +1386,7 @@
       </div>
 
       <!-- Rail -->
-      <div class="prep-block reveal" id="rail">
+      <div class="prep-block reveal" id="rail" data-panel="rail" role="tabpanel" aria-labelledby="tab-rail" hidden>
         <h3 class="prep-h"><span class="chip">B</span> Getting between cities</h3>
         <p class="prep-sub">The pass question is arithmetic, not loyalty. Here is the maths for the routes this guide covers first — then check the pass against the days you actually travel.</p>
         <div class="rail-grid">
@@ -1363,7 +1434,7 @@
       </div>
 
       <!-- Experiences -->
-      <div class="prep-block reveal" id="experiences">
+      <div class="prep-block reveal" id="experiences" data-panel="experiences" role="tabpanel" aria-labelledby="tab-experiences" hidden>
         <h3 class="prep-h"><span class="chip">C</span> One thing to book</h3>
         <p class="prep-sub">Weather-dependent plans are the ones worth pinning down early — a snow tour, a market morning, a counter seat. These are the experiences the city guides actually describe.</p>
         <div class="card-grid cols-2">
@@ -1410,7 +1481,7 @@
         <p class="sec-sub">Short answers, the numbers behind them, and no promises about the weather.</p>
       </div>
 
-      <div class="faq-list">
+      <div class="faq-list" id="faq-list">
         <details class="faq-item">
           <summary><span>When should I install a Japan eSIM — and when does the plan start?</span><span class="faq-ico" aria-hidden="true"></span></summary>
           <div class="faq-a">
@@ -1443,7 +1514,7 @@
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" data-extra>
           <summary><span>Do I need to book a winter ski lift ticket before I arrive?</span><span class="faq-ico" aria-hidden="true"></span></summary>
           <div class="faq-a">
             <p>Not necessarily, but the dates that matter go first. Hakuba Iwatake's one-day lift ticket starts around US$46 with instant confirmation, and gear rental is optional at checkout.</p>
@@ -1451,20 +1522,23 @@
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" data-extra>
           <summary><span>Is the 47 prefectures checklist really free?</span><span class="faq-ico" aria-hidden="true"></span></summary>
           <div class="faq-a">
             <p>Yes. It is a 5-page A4 PDF: one line per prefecture, plus a Before You Go page on data, money, rail and winter packing. No sign-up, no email, no paywall — open it, print it, or keep it on your phone.</p>
           </div>
         </details>
 
-        <details class="faq-item">
+        <details class="faq-item" data-extra>
           <summary><span>Which prefecture is next in the series?</span><span class="faq-ico" aria-hidden="true"></span></summary>
           <div class="faq-a">
             <p>Miyagi (Sendai) is live now, publishing Part 1 of 3, and Akita is next. Sapporo, Aomori, Morioka and Sendai are the four prefectures finished so far.</p>
             <p>Follow <a href="https://www.pinterest.com/japan47notes/" target="_blank" rel="noopener">@japan47notes</a> and the next city will find you.</p>
           </div>
         </details>
+      </div>
+      <div class="more-row">
+        <button class="btn-more" type="button" id="faq-more" aria-expanded="false" aria-controls="faq-list">Show all 7 questions</button>
       </div>
     </div>
   </section>
@@ -1487,7 +1561,7 @@
         <a href="https://www.pinterest.com/japan47notes/japan-travel-prep-esim-rail-pass-essentials/" target="_blank" rel="noopener">Travel prep: eSIM, rail pass &amp; essentials</a>
       </div>
 
-      <div class="disclosure" id="affiliate" style="margin-top:36px;">
+      <div class="disclosure" id="affiliate" style="margin-top:12px;">
         <strong>#affiliate</strong>
         Some links on this page are affiliate links. If you book through one, Japan 47 Notes may earn a small commission at no extra cost to you. Klook is the partner for tours, lift tickets, rail passes and tickets; Airalo and Saily are the partners for eSIM data plans. Prices, sales windows and availability change — always check the dates you want before booking. US$ figures are approximate conversions from yen at about ¥159 = US$1, and the rate at checkout decides. Fares, tour prices, lift-ticket prices and bloom dates were checked on 26–27 November 2026.
       </div>
@@ -1519,7 +1593,7 @@
     chugoku:'Chugoku & Shikoku', kyushu:'Kyushu & Okinawa'
   };
   var region = 'all';
-  var LIMIT = 12;
+  var LIMIT = 6;
   var expanded = false;
 
   function label(p){
@@ -1563,7 +1637,7 @@
 
     if(moreBtn){
       moreBtn.hidden = !defaultView;
-      moreBtn.textContent = expanded ? 'Show fewer — first 12' : 'Show all 47 prefectures';
+      moreBtn.textContent = expanded ? 'Show fewer' : 'Show all 47 prefectures';
       moreBtn.setAttribute('aria-expanded', String(expanded));
     }
   }
@@ -1583,6 +1657,114 @@
     moreBtn.addEventListener('click', function(){ expanded = !expanded; apply(); });
   }
   apply();
+
+  /* ---------- tab panels (seasonal + travel prep) ---------- */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var tablists = Array.prototype.slice.call(document.querySelectorAll('[role="tablist"]'));
+
+  function selectTab(list, key){
+    Array.prototype.slice.call(list.querySelectorAll('.tabbtn')).forEach(function(b){
+      var on = b.getAttribute('data-tab') === key;
+      b.setAttribute('aria-selected', String(on));
+      b.setAttribute('tabindex', on ? '0' : '-1');
+      var p = document.getElementById(b.getAttribute('data-tab'));
+      if(!p){ return; }
+      if(on){
+        p.removeAttribute('hidden');
+        if(p.classList.contains('reveal')){ p.classList.add('in'); }
+      } else {
+        p.setAttribute('hidden','');
+      }
+    });
+  }
+
+  tablists.forEach(function(list){
+    var btns = Array.prototype.slice.call(list.querySelectorAll('.tabbtn'));
+    btns.forEach(function(b){
+      var p = document.getElementById(b.getAttribute('data-tab'));
+      if(p){ p.__sel = function(){ selectTab(list, b.getAttribute('data-tab')); }; }
+    });
+    list.addEventListener('click', function(e){
+      var b = e.target.closest ? e.target.closest('.tabbtn') : null;
+      if(b){ selectTab(list, b.getAttribute('data-tab')); }
+    });
+    list.addEventListener('keydown', function(e){
+      if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft'){ return; }
+      var i = btns.indexOf(document.activeElement);
+      if(i === -1){ return; }
+      e.preventDefault();
+      var n = btns[(i + (e.key === 'ArrowRight' ? 1 : -1) + btns.length) % btns.length];
+      n.focus();
+      selectTab(list, n.getAttribute('data-tab'));
+    });
+  });
+
+  /* ---------- deep links: #sakura, #rail, #esim ... open their tab ---------- */
+  var panelAlias = { winter:'winter', sakura:'sakura', esim:'esim', rail:'rail', experiences:'experiences', seasonal:'winter', prep:'esim' };
+  function openPanel(id, doScroll){
+    var key = panelAlias[id];
+    if(!key){ return false; }
+    var p = document.getElementById(key);
+    if(!p || !p.__sel){ return false; }
+    p.__sel();
+    if(doScroll){
+      var top = p.getBoundingClientRect().top + window.pageYOffset - 74;
+      window.scrollTo({ top: top < 0 ? 0 : top, behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    return true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if(a){ openPanel(a.getAttribute('href').slice(1), false); }
+  });
+  window.addEventListener('hashchange', function(){ openPanel((location.hash || '').replace('#',''), true); });
+  if(location.hash && panelAlias[location.hash.replace('#','')]){
+    setTimeout(function(){ openPanel(location.hash.replace('#',''), true); }, 80);
+  }
+
+  /* ---------- featured guides rail ---------- */
+  var rail = document.getElementById('guide-rail');
+  var rPrev = document.getElementById('guide-prev');
+  var rNext = document.getElementById('guide-next');
+  if(rail && rPrev && rNext){
+    function railStep(){
+      var first = rail.querySelector('.guide');
+      if(!first){ return 280; }
+      var cs = window.getComputedStyle(rail);
+      var gap = parseFloat(cs.columnGap || cs.gap || '0') || 0;
+      return first.getBoundingClientRect().width + gap;
+    }
+    function railState(){
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      var over = rail.scrollWidth > rail.clientWidth + 2;
+      rPrev.hidden = !over;
+      rNext.hidden = !over;
+      rPrev.disabled = rail.scrollLeft <= 2;
+      rNext.disabled = rail.scrollLeft >= max;
+    }
+    rNext.addEventListener('click', function(){ rail.scrollBy({ left: railStep() * 2, behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    rPrev.addEventListener('click', function(){ rail.scrollBy({ left: -railStep() * 2, behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    rail.addEventListener('scroll', railState, { passive: true });
+    window.addEventListener('resize', railState);
+    setTimeout(railState, 400);
+  }
+
+  /* ---------- FAQ: first four questions, then show all ---------- */
+  var faqMoreEl = document.getElementById('faq-more');
+  var faqList = document.getElementById('faq-list');
+  if(faqMoreEl && faqList){
+    var extras = Array.prototype.slice.call(faqList.querySelectorAll('[data-extra]'));
+    var faqOpen = false;
+    var syncFaq = function(){
+      extras.forEach(function(el){
+        if(faqOpen){ el.removeAttribute('hidden'); } else { el.setAttribute('hidden',''); }
+      });
+      faqMoreEl.setAttribute('aria-expanded', String(faqOpen));
+      faqMoreEl.textContent = faqOpen ? 'Show fewer questions' : 'Show all 7 questions';
+    };
+    faqMoreEl.addEventListener('click', function(){ faqOpen = !faqOpen; syncFaq(); });
+    syncFaq();
+  }
 
   /* ---------- currency switch ---------- */
   var money = Array.prototype.slice.call(document.querySelectorAll('.money'));

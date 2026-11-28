@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://umaucuu-bot.github.io/japan47notes/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -12,19 +12,27 @@
     </image:image>
     <image:image>
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-sapporo.jpg</image:loc>
-      <image:title>Sapporo, Hokkaido — winter night lights guide</image:title>
+      <image:title>Sapporo, Hokkaido — winter night lights in Susukino</image:title>
     </image:image>
     <image:image>
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-aomori-winter.jpg</image:loc>
-      <image:title>Aomori City — winter in Aomori guide</image:title>
+      <image:title>Aomori City — winter illumination in the snow</image:title>
     </image:image>
     <image:image>
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-iwate.jpg</image:loc>
-      <image:title>Morioka, Iwate — the walkable castle town 2 h 10 min from Tokyo</image:title>
+      <image:title>Morioka, Iwate — Mount Iwate above the Kitakami river</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-kyoto.jpg</image:loc>
-      <image:title>Kyoto in bloom — cherry blossom guide for spring 2027</image:title>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/guide-miyagi.jpg</image:loc>
+      <image:title>Sendai, Miyagi — the Pageant of Starlight on Jozenji avenue</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/season-winter.jpg</image:loc>
+      <image:title>Winter ski 2026-27 — Hakuba Iwatake in the Northern Alps</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/season-sakura.jpg</image:loc>
+      <image:title>Sakura 2027 — Chidorigafuchi in Tokyo in full bloom</image:title>
     </image:image>
     <image:image>
       <image:loc>https://umaucuu-bot.github.io/japan47notes/assets/sakura-kyoto-card.jpg</image:loc>
